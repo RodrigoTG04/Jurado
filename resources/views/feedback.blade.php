@@ -1,1 +1,1 @@
-Su información ha sido procesada
+Su información ha sido procesada con éxito
