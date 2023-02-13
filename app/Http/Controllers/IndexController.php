@@ -14,7 +14,8 @@ class IndexController extends Controller
     public function index()
     {
         // Este método muestra o regresa la vista index
-        return view('index');
+        //return view('index');
+        return view('home');
     }
 
     /**
@@ -84,5 +85,9 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
+    }
+     public function home()
+    {
+        return view('home');
     }
 }
