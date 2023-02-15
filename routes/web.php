@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Mostrar la vista index, o vista inicial
 Route::get('/', 'IndexController@index')->name('index');
 
-Route::post('guardar', 'IndexController@store')->name('guardar');
+Route::post('guardar/', 'IndexController@guardar')->name('guardar');
+
+Route::get('jurado/', 'IndexController@store')->name('jurado');

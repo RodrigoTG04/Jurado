@@ -14,7 +14,6 @@ class IndexController extends Controller
     public function index()
     {
         // Este método muestra o regresa la vista index
-        //return view('index');
         return view('home');
     }
 
@@ -35,11 +34,8 @@ class IndexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        // Una vez que el usuario da clic en guardar se ejecuta este código
-        $entrada = $request->comentarios;
-        
-        return view('feedback');
+    {   
+        return view('index');
     }
 
     /**
@@ -86,8 +82,11 @@ class IndexController extends Controller
     {
         //
     }
-     public function home()
+     public function guardar(Request $request)
     {
-        return view('home');
+        // Una vez que el usuario da clic en guardar se ejecuta este código
+        $entrada = $request->comentarios;
+        
+        return view('feedback');
     }
 }
