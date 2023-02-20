@@ -10,7 +10,7 @@
 <body>
 <div  class="container">
   <div>
-  <font color="#20B2AA"><center><h1>Tabla de registo</h1></center></font>
+  <center><h1 style="color:#20B2AA;">Tabla de registo</h1></center>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <hr>
   </div>
