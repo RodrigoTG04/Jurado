@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script type='text/javascript'>
+  document.oncontextmenu = function(){return false}
+  </script>
 </head>
 <body>
   <div class="container-fluid wrapper">
@@ -25,7 +28,11 @@
           </div>
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
-              <embed width="1000" height="1000" src="https://libros.metabiblioteca.org/bitstream/001/591/1/004%20Desarrollo%20de%20aplicaciones%20web.pdf#toolbar=0">   
+              <object
+                type="application/pdf"
+                data="Desarrollo de aplicaciones web.pdf#toolbar=0"
+                style="width: 1000px; height: 1000px;">
+              </object>  
           </div>
         </div>
     </form>
