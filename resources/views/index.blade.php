@@ -28,11 +28,17 @@
           </div>
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
-              <object
-                type="application/pdf"
-                data="Desarrollo de aplicaciones web.pdf#toolbar=0"
-                style="width: 1000px; height: 1000px;">
-              </object>  
+              <div style="overflow:scroll; height:auto; width:auto;">
+                <!-- object id="documento"
+                  type="application/pdf"
+                  data="Desarrollo de aplicaciones web.pdf#toolbar=0"
+                  style="width: 1000px; height: 1000px;"
+                  style="pointer-events:none;">
+                </object> -->
+              </div>
+              <div style="overflow:scroll; height:auto; width:auto;">
+                <iframe id="documento" width="800" height="10000" style="pointer-events:none;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+              </div>
           </div>
         </div>
     </form>
