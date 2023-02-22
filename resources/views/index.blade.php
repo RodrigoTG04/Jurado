@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script type='text/javascript'>
-  document.oncontextmenu = function(){return false}
-  </script>
+<script type='text/javascript'>
+  document.oncontextmenu = function(){return false};
+</script>
 </head>
 <body>
   <div class="container-fluid wrapper">
@@ -36,8 +36,8 @@
                   style="pointer-events:none;">
                 </object> -->
               </div>
-              <div style="overflow:scroll; height:auto; width:auto;">
-                <iframe id="documento" width="800" height="10000" style="pointer-events:none;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+              <div style="overflow:scroll; height:1000px; width:1000px;">
+                <iframe id="documento" width="1000" height="1000" style="pointer-events:none;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
               </div>
           </div>
         </div>
