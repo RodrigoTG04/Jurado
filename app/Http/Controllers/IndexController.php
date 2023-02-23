@@ -14,7 +14,7 @@ class IndexController extends Controller
     public function index()
     {
         // Este método muestra o regresa la vista index
-        return view('home');
+        return view('listado');
     }
 
     /**
@@ -25,6 +25,7 @@ class IndexController extends Controller
     public function create()
     {
         //
+        return view('capturajurado');
     }
 
     /**
@@ -35,7 +36,7 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {   
-        return view('index');
+        
     }
 
     /**
