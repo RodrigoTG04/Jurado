@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
-  <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 <script type='text/javascript'>
   document.oncontextmenu = function(){return false};
 </script>
@@ -28,16 +28,8 @@
           </div>
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
-              <div style="overflow:scroll; height:auto; width:auto;">
-                <!-- object id="documento"
-                  type="application/pdf"
-                  data="Desarrollo de aplicaciones web.pdf#toolbar=0"
-                  style="width: 1000px; height: 1000px;"
-                  style="pointer-events:none;">
-                </object> -->
-              </div>
               <div style="overflow:scroll; height:1000px; width:1000px;">
-                <iframe id="documento" width="1000" height="1000" style="pointer-events:none;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+                <iframe id="documento" width="1000" height="1000" style="pointer-events:auto;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
               </div>
           </div>
         </div>
