@@ -20,4 +20,4 @@ Route::get('captura', 'IndexController@create')->name('captura.jurado');
 
 Route::post('guardar', 'IndexController@guardar')->name('guardar');
 
-Route::post('comentario', 'IndexController@store');
+Route::post('captura', 'IndexController@store');
