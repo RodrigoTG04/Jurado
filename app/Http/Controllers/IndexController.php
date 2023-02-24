@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CrearComentarioRequest;
+use App\Models\Comentarios;
 
 class IndexController extends Controller
 {
@@ -37,7 +38,11 @@ class IndexController extends Controller
      */
     public function store(CrearComentarioRequest $request)
     {   
-        dd($request);
+        $saved = Comentarios::create($request->all());
+        if($saved){
+            return redirect('comentario')->with('status', 'Su información ha sido procesada con éxito');
+        }
+        return redirect()->back()->withInput()->withErrors('Su información no ha sido procesada con éxito');
     }
 
     /**
