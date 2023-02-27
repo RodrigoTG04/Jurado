@@ -19,7 +19,7 @@
         @csrf
         <div class="row">
           <div class="col-md-5">
-              <textarea name="comentarios" cols="80" rows="20" placeholder="Capture aquí sus comentarios"></textarea>
+              <textarea name="comentario" cols="80" rows="20" placeholder="Capture aquí sus comentarios"></textarea>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">Guardar</button>
               </div>  
