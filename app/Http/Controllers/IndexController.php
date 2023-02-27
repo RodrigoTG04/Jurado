@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\CrearComentarioRequest;
-use App\Models\Comentarios;
 
 class IndexController extends Controller
 {
@@ -36,13 +34,9 @@ class IndexController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CrearComentarioRequest $request)
+    public function store()
     {   
-        $saved = Comentarios::create($request->all());
-        if($saved){
-            return redirect('comentario')->with('status', 'Su información ha sido procesada con éxito');
-        }
-        return redirect()->back()->withInput()->withErrors('Su información no ha sido procesada con éxito');
+
     }
 
     /**
@@ -89,11 +83,12 @@ class IndexController extends Controller
     {
         //
     }
-     public function guardar(Request $request)
+     public function guardar()
     {
-        // Una vez que el usuario da clic en guardar se ejecuta este código
-        $entrada = $request->comentarios;
-        
-        return view('feedback');
+        request()->validate([
+            'comentario' =>'required'
+        ]);
+
+        return 'feedback';
     }
 }
