@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Comentarios;
+
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -85,10 +87,8 @@ class IndexController extends Controller
     }
      public function guardar()
     {
-        request()->validate([
-            'comentario' =>'required'
+        return Comentarios::create([
+            'comentario' => request('comentario')
         ]);
-
-        return 'feedback';
     }
 }
