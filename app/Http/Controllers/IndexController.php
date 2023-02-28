@@ -88,7 +88,7 @@ class IndexController extends Controller
      public function guardar()
     {
         return Comentarios::create([
-            'comentario' => request('comentario')
+            'comentarios' => request('comentario'),
         ]);
     }
 }

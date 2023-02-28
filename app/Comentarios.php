@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comentarios extends Model
 {
-    protected $fillable = ['comentario'];
+    public $timestamps = false;
+    
+    protected $fillable = ['comentarios'];
 }
