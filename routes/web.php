@@ -18,6 +18,4 @@ Route::get('/', 'IndexController@index')->name('listado');
 
 Route::get('captura', 'IndexController@create')->name('captura.jurado');
 
-//Route::post('guardar', 'IndexController@guardar')->name('guardar');
-
-Route::post('captura', 'IndexController@guardar')->name('guardar');
+Route::post('guardar', 'IndexController@guardar')->name('guardar');
