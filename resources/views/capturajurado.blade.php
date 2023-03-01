@@ -6,26 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="sweetalert2.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2.min.js"></script>
-  <script>
-     $('.form-comentario').submit(function(e){
-      e.preventDefault();
-    Swal.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
-}).then((result) => {
-  if (result.value) {
-    this.submit
-  }
-})
-  </script>
 <script type='text/javascript'>
   document.oncontextmenu = function(){return false};
 </script>
@@ -35,7 +15,7 @@
     <div class="three">
     <h2 style="color:#20B2AA;">Comentario</h2>
     </div>
-    <form action="{{ route('guardar') }}" method="POST" entype="multipart/form-data" class="form-comentario">
+    <form action="{{ route('guardar') }}" method="POST" enctype="multipart/form-data" class="d-inline formulario-comentario">
         @csrf
         <div class="row">
           <div class="col-md-5">
@@ -55,5 +35,25 @@
         </div>
     </form>
   </div>
+  <script src="sweetalert2.all.min.js"></script>
+  <script>
+    $('.formulario-comentario').submit(function(e){
+      e.preventDefault();
+
+    Swal.fire({
+        title: '¿Está seguro(a) de su comentario?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Guardar'
+      }).then((result) => {
+        if (result.value) {
+            this.submit()
+          }
+      })
+    });
+  </script>
 </body>
 </html>
