@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="sweetalert2.min.css">
 <script type='text/javascript'>
   document.oncontextmenu = function(){return false};
 </script>
@@ -38,9 +37,9 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
-    $('.formulario-comentario').submit(function(e){
+    $(".formulario-comentario").submit(function(e){
       e.preventDefault();
-
+    });
     Swal.fire({
         title: '¿Está seguro(a) de su comentario?',
         text: "¡No podrás revertir esto!",
@@ -54,7 +53,6 @@
             this.submit()
           }
       })
-    });
   </script>
 </body>
 </html>
