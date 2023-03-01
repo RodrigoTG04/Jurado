@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<script>
+  $('.formulario-comentario').submit(function(e){
+    e.preventDefault();
+  Swal.fire({
+      title: '¿Está seguro(a) de su comentario?',
+      text: "¡No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, Guardar'
+    }).then((result) => {
+      if (result.value) {
+          this.submit()
+        }
+    })
+  });
+</script>
 <script type='text/javascript'>
   document.oncontextmenu = function(){return false};
 </script>
@@ -35,25 +53,5 @@
         </div>
     </form>
   </div>
-  <script src="sweetalert2.all.min.js"></script>
-  <script>
-    $('.formulario-comentario').submit(function(e){
-      e.preventDefault();
-
-    Swal.fire({
-        title: '¿Está seguro(a) de su comentario?',
-        text: "¡No podrás revertir esto!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Guardar'
-      }).then((result) => {
-        if (result.value) {
-            this.submit()
-          }
-      })
-    });
-  </script>
 </body>
 </html>
