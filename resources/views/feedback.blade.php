@@ -1,1 +1,1 @@
-Su información ha sido procesada con éxito
+<h1>Su información ha sido procesada con éxito</h1>

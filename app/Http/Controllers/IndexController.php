@@ -85,10 +85,13 @@ class IndexController extends Controller
     {
         //
     }
-     public function guardar()
+     public function guardar(Request $request)
+
     {
-        return Comentarios::create([
-            'comentarios' => request('comentario'),
-        ]);
+        $sesion=new Comentarios;
+
+        $sesion->comentarios=$request->comentario;
+        $sesion->save();
+        return view ('feedback');
     }
 }
