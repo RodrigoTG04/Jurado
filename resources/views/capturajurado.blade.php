@@ -7,7 +7,15 @@
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 <script type='text/javascript'>
-  document.oncontextmenu = function(){return false};
+function inhabilitar(){
+
+alert ("Función bloqueada.Perdonen las molestias.")
+
+return false
+
+}
+
+document.oncontextmenu=inhabilitar
 </script>
 </head>
 <body>
@@ -29,7 +37,7 @@
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
               <div style="overflow:scroll; height:1000px; width:1000px;">
-                <iframe id="documento" width="1000" height="1000" style="pointer-events:auto;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+                <embed id="documento" name="documento" width="1000" height="1000" style="pointer-events:auto;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></embed>
               </div>
           </div>
         </div>
