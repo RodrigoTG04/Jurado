@@ -92,6 +92,6 @@ class IndexController extends Controller
 
         $sesion->comentarios=$request->comentario;
         $sesion->save();
-        return view ('feedback');
+        return view ('listado');
     }
 }
