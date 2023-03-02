@@ -35,11 +35,12 @@
         </div>
     </form>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    $(".formulario-comentario").submit(function(e){
-      e.preventDefault();
-    });
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $('.formulario-comentario').submit(function(e){
+    e.preventDefault();
+
     Swal.fire({
         title: '¿Está seguro(a) de su comentario?',
         text: "¡No podrás revertir esto!",
@@ -51,8 +52,14 @@
       }).then((result) => {
         if (result.value) {
             this.submit()
-          }
-      })
-  </script>
+          Swal.fire(
+          '¡Guardado!',
+          'Su comentario ha sido guardado correctamente',
+          'success'
+        )
+      } 
+    })
+  });
+</script>
 </body>
 </html>
