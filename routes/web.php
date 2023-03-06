@@ -18,4 +18,4 @@ Route::get('/', 'ParticipanteController@index')->name('listado');
 
 Route::get('captura', 'ParticipanteController@create')->name('captura.jurado');
 
-Route::post('guardar', 'IndexController@guardar')->name('guardar');
+Route::post('guardar', 'ComentarioJuradoController@store')->name('guardar');

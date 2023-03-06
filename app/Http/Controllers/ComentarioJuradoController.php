@@ -35,6 +35,10 @@ class ComentarioJuradoController extends Controller
     public function store(Request $request)
     {
         //
+        $sesion=new Comentarios;
+        $sesion->comentarios=$request->comentario;
+        $sesion->save();
+        return view ('listado');
     }
 
     /**
