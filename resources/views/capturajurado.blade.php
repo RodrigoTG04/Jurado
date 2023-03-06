@@ -6,14 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-<script type='text/javascript'>
-  function disableContextMenu()
-  {
-    window.frames["fraDisabled"].document.oncontextmenu = function(){alert("No way!"); return false;};
-  }
+  <script language="JavaScript">
+    <!-- Disable
+    function disableselect(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    //if IE4+
+    document.onselectstart=new Function ("return false")
+    document.oncontextmenu=new Function ("return false")
+    //if NS6
+    if (window.sidebar){
+    document.onmousedown=disableselect
+    document.onclick=reEnable
+    }
+    //-->
 </script>
 </head>
-<body bgcolor="#FFFFFF" onload="disableContextMenu();" oncontextmenu="return false">
+<body>
   <div class="container-fluid wrapper">
     <div class="three">
     <h2 style="color:#20B2AA;">Comentario</h2>
@@ -31,8 +43,8 @@
           </div>
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
-              <div style="overflow:scroll; height:1000px; width:1000px;">
-                <iframe id="fraDisabled" name="fraDisable" width="1000" height="1000" onMyload="disableContextMenu();" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+              <div>
+                <embed id="frame_pdf" name="frame_pdf" width="1000" height="1000" style="pointer-events:auto;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></embed>
               </div>
           </div>
         </div>
