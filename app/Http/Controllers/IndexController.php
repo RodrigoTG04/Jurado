@@ -16,7 +16,7 @@ class IndexController extends Controller
     public function index()
     {
         // Este método muestra o regresa la vista index
-        return view('listado');
+        //return view('listado');
     }
 
     /**
@@ -27,7 +27,7 @@ class IndexController extends Controller
     public function create()
     {
         //
-        return view('capturajurado');
+        //return view('capturajurado');
     }
 
     /**
@@ -88,10 +88,10 @@ class IndexController extends Controller
      public function guardar(Request $request)
 
     {
-        $sesion=new Comentarios;
+        //$sesion=new Comentarios;
 
-        $sesion->comentarios=$request->comentario;
-        $sesion->save();
-        return view ('listado');
+        //$sesion->comentarios=$request->comentario;
+        //$sesion->save();
+        //return view ('listado');
     }
 }

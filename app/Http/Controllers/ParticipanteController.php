@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Participante;
 
 class ParticipanteController extends Controller
 {
@@ -14,6 +15,8 @@ class ParticipanteController extends Controller
     public function index()
     {
         //
+        $participante = Participante::all();
+        return view ('listado', array('participante' => $participante));
     }
 
     /**
@@ -24,6 +27,7 @@ class ParticipanteController extends Controller
     public function create()
     {
         //
+        return view('capturajurado');
     }
 
     /**

@@ -9,7 +9,7 @@ class Participante extends Model
     // Propiedades del modelo
     public $timestamps = false;
     
-    protected $table = 'participante';
+    protected $table = 'participantes';
     protected $fillable = ['nombre', 'correo'];
     protected $primarykey = 'id';
 }
