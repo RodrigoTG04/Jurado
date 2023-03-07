@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Participante;
+use App\LibroParticipante;
 
 class ParticipanteController extends Controller
 {
@@ -15,8 +16,16 @@ class ParticipanteController extends Controller
     public function index()
     {
         //
-        $participante = Participante::all();
-        return view ('listado', array('participante' => $participante));
+        $participantes = Participante::get();
+        foreach($participantes as $participante)
+        {
+            $participante->archivo = LibroParticipante::where('participante_id', '=', $participante->id)->nombre_libro->get(); 
+            dd($participante->archivo);
+        }
+        
+        dd($participantes);
+        return view ('listado', compact('participantes'));
+       // return view ('libro', compact('libro_participante');
     }
 
     /**
@@ -27,7 +36,7 @@ class ParticipanteController extends Controller
     public function create()
     {
         //
-        return view('capturajurado');
+       
     }
 
     /**

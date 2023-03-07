@@ -10,6 +10,10 @@ class Participante extends Model
     public $timestamps = false;
     
     protected $table = 'participantes';
-    protected $fillable = ['nombre', 'correo'];
     protected $primarykey = 'id';
+    protected $fillable = ['folio', 'pseudonimo', 'fecha_registro'];
+
+    public function libro(){
+        return $this->hasOne(LibroParticipante::class, 'participante_id', 'id');
+    }
 }

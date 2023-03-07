@@ -11,5 +11,5 @@ class LibroParticipante extends Model
 
     protected $table = 'libros_participantes';
     protected $primarykey = 'id';
-    protected $fillable = ['nombre_libro', 'ruta_archivo'];
+    protected $fillable = ['participante_id', 'nombre_libro', 'ruta_archivo'];
 }

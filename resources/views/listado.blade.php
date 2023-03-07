@@ -19,13 +19,15 @@
             </tr>
           </thead>
           <tbody>
-          @foreach($participante as $listado)
+          @foreach($participantes as $listado)
+          
+                  <!-- ($libro_participantes as $libro) -->
           <tr>
               <td>{{$listado->id}}</td>
               <td>{{$listado->folio}}</td>
               <td>{{$listado->pseudonimo}}</td>
               <td>{{$listado->fecha_registro}}</td>
-              <td>{{$listado->ruta_pdf}}<a href="{{ route('captura.jurado') }}">Ver</a></td>
+              <td><a href="{{ (isset($listado->libro->ruta_archivo))?$listado->libro->ruta_archivo:'' }}">{{ $listado->libro->nombre_libro }}</a></td>
           </tr>    
           @endforeach
           </tbody>
