@@ -11,7 +11,7 @@ class Participante extends Model
     
     protected $table = 'participantes';
     protected $primarykey = 'id';
-    protected $fillable = ['folio', 'pseudonimo', 'fecha_registro'];
+    protected $fillable = ['folio', 'pseudonimo', 'fecha_registro', 'ruta_pdf'];
 
     public function libro(){
         return $this->hasOne(LibroParticipante::class, 'participante_id', 'id');

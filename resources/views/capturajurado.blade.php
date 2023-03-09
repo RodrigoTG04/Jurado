@@ -44,7 +44,7 @@
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
               <div>
-                <embed id="frame_pdf" name="frame_pdf" width="1000" height="1000" style="pointer-events:auto;" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></embed>
+                <iframe width="1000" height="1000" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
               </div>
           </div>
         </div>
