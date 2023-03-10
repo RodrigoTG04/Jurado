@@ -4,7 +4,17 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-
-<footer>Alejandro Rodrigo Torres González</footer>
+<footer>Instituto Nacional de Bellas Artes y Literatura</footer>

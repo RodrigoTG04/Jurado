@@ -7,7 +7,7 @@
   <title>Premios Literatura</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <script language="JavaScript">
-    <!-- Disable
+        <!-- Disable
     function disableselect(e){
     return false
     }
@@ -23,7 +23,7 @@
     document.onclick=reEnable
     }
     //-->
-</script>
+  </script>
 </head>
 <body>
   <div class="container-fluid wrapper">
@@ -43,8 +43,8 @@
           </div>
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
-              <div>
-                <iframe src="{{ url($participantes[0]->ruta_archivo) }}" name="iframe_pdf" width="1000" height="1000"></iframe>
+              <div id="iframe_pdf">
+                <iframe src="{{ url($participantes[0]->ruta_archivo) }}#toolbar=0&navpanes=0" name="iframe_pdf" width="1000" height="1000"></iframe>
               </div>
           </div>
         </div>
