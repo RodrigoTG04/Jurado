@@ -44,7 +44,7 @@
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
               <div>
-                <iframe width="1000" height="1000" src="Desarrollo de aplicaciones web.pdf#toolbar=0"></iframe>
+                <iframe src="{{ url($participantes[0]->ruta_archivo) }}" name="iframe_pdf" width="1000" height="1000"></iframe>
               </div>
           </div>
         </div>

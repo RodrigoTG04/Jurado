@@ -36,7 +36,9 @@ class ParticipanteController extends Controller
     public function create()
     {
         //
-        return view('capturajurado');
+        $participantes = LibroParticipante::all();
+        //dd($participantes);
+        return view('capturajurado', compact('participantes'));
        
     }
 
