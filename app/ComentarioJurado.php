@@ -11,5 +11,5 @@ class ComentarioJurado extends Model
 
     protected $table = 'comentarios_jurado';
     protected $primarykey = 'id';
-    protected $fillable = ['comentario', 'fecha_comentario'];
+    protected $fillable = ['libro_id', 'comentario', 'fecha_comentario', 'user_id'];
 }

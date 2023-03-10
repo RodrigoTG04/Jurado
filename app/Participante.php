@@ -13,7 +13,7 @@ class Participante extends Model
     protected $primarykey = 'id';
     protected $fillable = ['folio', 'pseudonimo', 'fecha_registro', 'ruta_pdf'];
 
-    public function libro(){
-        return $this->hasOne(LibroParticipante::class, 'participante_id', 'id');
-    }
+    //public function libro(){
+        //return $this->hasOne(LibroParticipante::class, 'participante_id', 'id');
+    //}
 }

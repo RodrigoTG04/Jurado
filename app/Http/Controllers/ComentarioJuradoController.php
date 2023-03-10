@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\ComentarioJurado;
+use App\Participante;
+
 use Illuminate\Http\Request;
 
 class ComentarioJuradoController extends Controller
@@ -35,10 +38,15 @@ class ComentarioJuradoController extends Controller
     public function store(Request $request)
     {
         //
-        $sesion=new Comentarios;
-        $sesion->comentarios=$request->comentario;
+        $participantes = Participante::all();
+        $sesion=new ComentarioJurado;
+        $sesion->libro_id=$request->libro_id;
+        $sesion->comentario=$request->comentario;
+        $sesion->fecha_comentario=$request->fecha_comentario;
+        $sesion->user_id=$request->user_id;
         $sesion->save();
-        return view ('listado');
+        return view ('listado', compact('participantes'));
+    
     }
 
     /**

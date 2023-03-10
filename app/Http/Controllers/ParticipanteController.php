@@ -17,11 +17,11 @@ class ParticipanteController extends Controller
     {
         //
         $participantes = Participante::all();
-        foreach($participantes as $participante)
-        {
+        //foreach($participantes as $participante)
+        //{
             //$participante=LibroParticipante::where('participante_id', '=', $participante)->get(); 
             //dd($participante->archivo);
-        }
+        //}
         
         //dd($participantes);
         return view ('listado', compact('participantes'));

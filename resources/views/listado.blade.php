@@ -27,7 +27,7 @@
               <td>{{$listado->folio}}</td>
               <td>{{$listado->pseudonimo}}</td>
               <td>{{$listado->fecha_registro}}</td>
-              <td><center><a class="btn btn-primary" href="{{ (isset($listado->libro->ruta_archivo))?$listado->libro->ruta_archivo:'' }}">{{ $listado->libro->nombre_libro }}" target="blank_">Ver</a></center></td>
+              <td><center><a class="btn btn-primary" href="{{ route('captura.jurado') }}" target="blank_">Ver</a></center></td>
           </tr>    
           @endforeach
           </tbody>
