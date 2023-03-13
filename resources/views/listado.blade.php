@@ -19,16 +19,17 @@
             </tr>
           </thead>
           <tbody>
-          @foreach($participantes as $listado)
-          
+          @foreach($participantes as $participante)
+            @isset($participante->libro)
                   <!-- ($libro_participantes as $libro) -->
-          <tr>
-              <td>{{$listado->id}}</td>
-              <td>{{$listado->folio}}</td>
-              <td>{{$listado->pseudonimo}}</td>
-              <td>{{$listado->fecha_registro}}</td>
-              <td><center><a class="btn btn-primary" href="{{ route('captura.jurado') }}" target="blank_">Ver</a></center></td>
-          </tr>    
+              <tr>
+                <td>{{ $participante->id }}</td>
+                <td>{{ $participante->folio }}</td>
+                <td>{{ $participante->pseudonimo }}</td>
+                <td>{{ $participante->fecha_registro }}</td>
+                <td><center><a class="btn btn-primary" href="{{ route('captura.jurado', $participante->libro->id) }}" target="blank_">Ver</a></center></td>
+              </tr>
+            @endisset
           @endforeach
           </tbody>
         </table>

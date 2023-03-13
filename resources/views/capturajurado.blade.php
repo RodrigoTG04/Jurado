@@ -34,7 +34,8 @@
         @csrf
         <div class="row">
           <div class="col-md-5">
-              <textarea name="comentario" cols="80" rows="20" placeholder="Capture aquí sus comentarios" required></textarea>
+          <input id="libro_id" name="libro_id" type="hidden" value="{{ $libro_participante[0]->id }}">
+              <textarea name="txt_comentario" cols="80" rows="20" placeholder="Capture aquí sus comentarios" required></textarea>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">Guardar</button>
               </div>  
@@ -44,7 +45,7 @@
           <div class="col-md-5" style="margin-left: -1px;">
             <hr class="d-sm-block d-md-none">
               <div id="iframe_pdf">
-                <iframe src="{{ url($participantes[0]->ruta_archivo) }}#toolbar=0&navpanes=0" name="iframe_pdf" width="1000" height="1000"></iframe>
+                <iframe src="{{ url($libro_participante[0]->ruta_archivo) }}#toolbar=0&navpanes=0" name="iframe_pdf" width="1000" height="1000"></iframe>
               </div>
           </div>
         </div>

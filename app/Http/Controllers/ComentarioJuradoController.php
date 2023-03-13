@@ -38,14 +38,15 @@ class ComentarioJuradoController extends Controller
     public function store(Request $request)
     {
         //
-        $participantes = Participante::all();
+        // dd($request);
+        // $participantes = Participante::all();
         $sesion=new ComentarioJurado;
         $sesion->libro_id=$request->libro_id;
-        $sesion->comentario=$request->comentario;
+        $sesion->comentario=$request->txt_comentario;
         $sesion->fecha_comentario=$request->fecha_comentario;
         $sesion->user_id=$request->user_id;
         $sesion->save();
-        return view ('listado', compact('participantes'));
+        return redirect('/');
     
     }
 

@@ -23,7 +23,7 @@ class ParticipanteController extends Controller
             //dd($participante->archivo);
         //}
         
-        //dd($participantes);
+        // dd($participantes);
         return view ('listado', compact('participantes'));
        // return view ('libro', compact('libro_participante');
     }
@@ -33,12 +33,16 @@ class ParticipanteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    // Debe recibir el id del participante
+    public function create($id)
     {
-        //
-        $participantes = LibroParticipante::all();
+        // dd($id);
+        // Se realiza la búsqueda del libro específico del participante
+
+        $libro_participante = LibroParticipante::where('id', $id)->get();
+        // dd($libro_participante);
         //dd($participantes);
-        return view('capturajurado', compact('participantes'));
+        return view('capturajurado', compact('libro_participante'));
        
     }
 
@@ -51,6 +55,7 @@ class ParticipanteController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**

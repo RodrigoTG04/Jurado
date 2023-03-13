@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Mostrar la vista index, o vista inicial
 Route::get('/', 'ParticipanteController@index')->name('listado');
 
-Route::get('captura', 'ParticipanteController@create')->name('captura.jurado');
+Route::get('captura/{id}', 'ParticipanteController@create')->name('captura.jurado');
 
 Route::post('guardar', 'ComentarioJuradoController@store')->name('guardar');
