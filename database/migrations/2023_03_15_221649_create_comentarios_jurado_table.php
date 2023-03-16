@@ -14,7 +14,9 @@ class CreateComentariosJuradoTable extends Migration
     public function up()
     {
         Schema::create('comentarios_jurado', function (Blueprint $table) {
-            $table->unsignedmediumIncrements('id');
+            $table->mediumIncrements('id')->unsigned();
+            $table->foreingId('libro_id')->references('id')->on('libros_participantes');
+            $table->char('comentario', 250);
             $table->
             $table->timestamps();
         });
