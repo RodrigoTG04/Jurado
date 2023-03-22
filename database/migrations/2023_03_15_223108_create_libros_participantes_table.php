@@ -14,8 +14,9 @@ class CreateLibrosParticipantesTable extends Migration
     public function up()
     {
         Schema::create('libros_participantes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->mediumIncrements('id')->unsigned();
+            $table->string('nombre_libro', 120);
+            $table
         });
     }
 

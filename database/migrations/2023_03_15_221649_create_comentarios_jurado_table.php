@@ -17,8 +17,8 @@ class CreateComentariosJuradoTable extends Migration
             $table->mediumIncrements('id')->unsigned();
             $table->foreingId('libro_id')->references('id')->on('libros_participantes');
             $table->string('comentario', 250);
-            $table->
-            $table->timestamps();
+            $table->dateTime('fecha_comentario', 0);
+            $table->foreingId('user_id')->references('id')->on('users');
         });
     }
 
