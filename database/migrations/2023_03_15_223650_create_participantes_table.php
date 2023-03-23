@@ -15,10 +15,10 @@ class CreateParticipantesTable extends Migration
     {
         Schema::create('participantes', function (Blueprint $table) {
             $table->mediumIncrements('id')->unsigned();
-            $table->string('folio');
+            $table->string('folio', 100);
             $table->string('pseudonimo');
             $table->date('fecha_registro');
-            $table->
+            $table->string('ruta_archivo', 300);
         });
     }
 

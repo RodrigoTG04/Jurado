@@ -15,10 +15,13 @@ class CreateComentariosJuradoTable extends Migration
     {
         Schema::create('comentarios_jurado', function (Blueprint $table) {
             $table->mediumIncrements('id')->unsigned();
-            $table->foreingId('libro_id')->references('id')->on('libros_participantes');
+            $table->unsignedmediumInteger('libro_id');
             $table->text('comentario');
             $table->dateTime('fecha_comentario', 0);
-            $table->foreingId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users');
+
+
+            $table->foreign('libro_id')->references('id')->on('libros_participantes');
         });
     }
 
