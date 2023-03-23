@@ -16,7 +16,7 @@ class CreateLibrosParticipantesTable extends Migration
     {
         Schema::create('libros_participantes', function (Blueprint $table) {
             $table->mediumIncrements('id')->unsigned()->comment('Es la llave primaria de la tabla');
-            $table->foreignId('participante_id')->references('id')->on('participantes')->comment('Almacena la FK del ID del participante');
+            $table->foreignId('participante_id')->constrained('participantes')->comment('Almacena la FK del ID del participante');
             $table->string('nombre_libro')->nullable(true)->default('')->comment('Es el nombre del archivo subido por el participante');
             $table->string('ruta_archivo')->nullable(true)->default('')->comment('Es la ruta donde se almacena el archivo en el servidor');
         });

@@ -14,15 +14,13 @@ class CreateComentariosJuradoTable extends Migration
     public function up()
     {
         Schema::create('comentarios_jurado', function (Blueprint $table) {
-            $table->mediumIncrements('id')->unsigned();
-            $table->unsignedmediumInteger('libro_id');
-            $table->text('comentario');
-            $table->dateTime('fecha_comentario', 0);
-            $table->foreignId('user_id')->references('id')->on('users');
-
-
-            $table->foreign('libro_id')->references('id')->on('libros_participantes');
+            $table->mediumIncrements('id')->unsigned()->comment('Es la llave primaria de la tabla');
+            $table->foreignId('libro_id')->constrained('libros_participantes')->comment('Almacena la FK del ID de los libros_partipantes');
+            $table->text('comentario')->comment('Es el comentario sobre el libro del participante');
+            $table->dateTime('fecha_comentario', 0)->comment('Es la fecha de cuando hace el comentario sobre el libro del participante');
+            $table->foreignId('user_id')->constrained('users')->comment('Almacena la FK del ID de los users');
         });
+        DB::statement("ALTER TABLE libros_participantes COMMENT 'Almacena los comentarios y las fechas relacionando con el ID del participante'");
     }
 
     /**

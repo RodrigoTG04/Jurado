@@ -14,12 +14,12 @@ class CreateParticipantesTable extends Migration
     public function up()
     {
         Schema::create('participantes', function (Blueprint $table) {
-            $table->mediumIncrements('id')->unsigned();
-            $table->string('folio', 100);
-            $table->string('pseudonimo');
-            $table->date('fecha_registro');
-            $table->string('ruta_archivo', 300);
+            $table->mediumIncrements('id')->unsigned()->comment('Es la llave primaria de la tabla');
+            $table->string('folio', 100)->comment('Es el folio del participante');
+            $table->string('pseudonimo')->comment('Es el nombre del participante');
+            $table->date('fecha_registro')->comment('Es la fecha de registro del participante');
         });
+        DB::statement("ALTER TABLE participantes COMMENT 'Almacena los folios, nombres y fechas relacionando con el ID del participante'");
     }
 
     /**
