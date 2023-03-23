@@ -15,8 +15,9 @@ class CreateLibrosParticipantesTable extends Migration
     {
         Schema::create('libros_participantes', function (Blueprint $table) {
             $table->mediumIncrements('id')->unsigned();
-            $table->string('nombre_libro', 120);
-            $table
+            $table->foreingId('participantes_id')->references('id')->on('paeticipantes');
+            $table->string('nombre_libro');
+            $table->string('ruta_archivo');
         });
     }
 

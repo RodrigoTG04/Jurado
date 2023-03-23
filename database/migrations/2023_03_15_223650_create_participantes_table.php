@@ -14,8 +14,11 @@ class CreateParticipantesTable extends Migration
     public function up()
     {
         Schema::create('participantes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->mediumIncrements('id')->unsigned();
+            $table->string('folio');
+            $table->string('pseudonimo');
+            $table->date('fecha_registro');
+            $table->
         });
     }
 
